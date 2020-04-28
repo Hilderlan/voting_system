@@ -1,0 +1,17 @@
+<div class="column is-4">
+  <%= link_to campaign do %>   
+    <div class="card is-shady">
+      <div class="card-image section">
+        <figure class="image is-3by3">
+          <%= image_tag campaign.image %>
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="content section">
+          <h4><%= campaign.title %> <%= (campaign.blocked ? "- Bloqueada" : "") %></h4>
+          <p><%= campaign.description %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
