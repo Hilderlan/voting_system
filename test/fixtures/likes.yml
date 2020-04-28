@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  campaign: one
+  user: one
+  kind: false
+
+two:
+  campaign: two
+  user: two
+  kind: false
