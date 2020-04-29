@@ -93,7 +93,7 @@ $(document).on('ready turbolinks:load', function(){
     $.ajax(settings).done(function (response) {
       if(response.kind == vote){
         like_id = response.id
-        alert("Created!");
+        alert("Vote added!");
       }else{
         alert("Something went wrong!");
       }
@@ -118,7 +118,7 @@ $(document).on('ready turbolinks:load', function(){
     $.ajax(settings).done(function (response) {
       if(response.kind == vote){
         like_id = response.id
-        alert("Updated!");
+        alert("Updated vote!");
       }else{
         alert("Something went wrong!");
       }
