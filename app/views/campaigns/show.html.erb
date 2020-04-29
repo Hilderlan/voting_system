@@ -1,0 +1,41 @@
+<section class="container">
+  <div class="columns features is-centered">
+    <div class="column is-4">
+      <div class="section">
+
+        <div class="card is-shady">
+          <div class="card-image">
+            <div class="section">
+              <figure class="image is-3by3">
+                <%= image_tag @campaign.image %>
+              </figure>
+            </div>
+          </div>
+
+          <div class="card-content">
+            <div class="content section">
+              <h2 class="title has-text-centered"><%= @campaign.title %></h2>
+              <p><%= @campaign.description %></p>
+              <time datetime="2016-1-1"><%= @campaign.created_at %></time>
+            </div>
+          </div>
+          <% if @campaign.blocked %>
+            <div class="section">
+              <div class="has-text-centered">
+                <i><%= @likes %> gostaram</i>
+              </div>
+              <div class="has-text-centered">
+                <i><%= @dislikes %> não gostaram</i>
+              </div>
+            </div>
+          <% else %>
+            <div class="has-text-centered section">
+              <i id="liked"></i>
+              <i id="disliked"></i>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

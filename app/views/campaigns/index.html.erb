@@ -1,0 +1,13 @@
+<section id="dashboard" class="section has-text-white has-text-centered dashboard">
+  <div class="campaigns">
+    <h2 class="is-size-5 has-text-white-semibold">All Campaigns</h2>
+    <% if @campaigns.count > 0 %>
+      <br/>
+      <section class="container">
+        <div class="columns features">
+          <%= render @campaigns %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>

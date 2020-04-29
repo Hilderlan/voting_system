@@ -1,0 +1,46 @@
+<section  class="section">
+  <div class="container column is-half">
+    <h1 class="is-size-3 is-size-4-mobile has-text-white-semibold has-text-white has-text-centered">Login</h1>
+  </div>
+  <div class="container column is-half login">
+    <form class="new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <%= devise_error_messages! %>
+      <div class="field">
+        <p class="control has-icons-left has-icons-right">
+          <input autofocus="autofocus" class="input" placeholder="Email" autofocus="autofocus" autocomplete="email" type="email" value="" name="user[email]" id="user_email">
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control has-icons-left">
+          <input class="input" placeholder="Password" autocomplete="current-password" type="password" name="user[password]" id="user_password" >
+          <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <input name="user[remember_me]" type="hidden" value="0" /><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
+        <label for="user_remember_me">Remember me</label>
+      </div>
+      <div class="field">
+        <p class="control center">
+          <button class="button is-fullwidth is-rounded is-link" type="submit" name="commit">
+            Login
+          </button>
+        </p>
+      </div>
+    </form>
+  </div>
+  <div class="container column is-half center">
+    <br/>
+    <a class="button is-fullwidth is-rounded is-outlined is-primary" href="/users/sign_up">Sign up</a>
+    <a class="button is-fullwidth is-rounded is-outlined is-warning" href="/users/password/new">Forgot your password?</a>
+  </div>
+</section>
