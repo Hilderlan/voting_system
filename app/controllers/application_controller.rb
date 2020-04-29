@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
 
   # Ensure that the user authenticates to the system
   before_action :authenticate_user!
+
+  skip_before_action :verify_authenticity_token
  
   protected
   
